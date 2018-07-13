@@ -69,8 +69,6 @@ public:
   // Returns true if new data has arrived, false it function times out
   bool waitForNewData(void);
 	
-  bool isRawData() const;	
-	
   void doZero();	
   void doUnzero();
 protected:
