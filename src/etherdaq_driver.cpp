@@ -324,16 +324,6 @@ void EtherDAQDriver::doUnzero()
   offset_data_.wrench.torque.z = 0.0;	
 }
 	
-	
-bool EtherDAQDriver::isRawData() const
-{
-	if (force_units_ == 2 && torque_units_ == 3) {
-		return false;
-	}
-	return true;
-}		
-
-
 bool EtherDAQDriver::waitForNewData()
 {
   // Wait upto 100ms for new data
