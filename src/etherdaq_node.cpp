@@ -123,14 +123,9 @@ int main(int argc, char **argv)
   }
 
   etherdaq = new optoforce_etherdaq_driver::EtherDAQDriver(address, pub_rate_hz, filter_hz);
-	
-  bool isRawData = etherdaq->isRawData();
 
   std::string topicName = "ethdaq_data";	
-  if (isRawData) {
-	  topicName += "_raw";
-  }
-	
+ 	
   ros::Publisher pub;
   ros::Subscriber sub = nh.subscribe("ethdaq_zero", 1000, zeroFunction);
   if (publish_wrench)
