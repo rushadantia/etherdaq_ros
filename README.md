@@ -14,7 +14,7 @@ In a console, type:
  * mkdir src
  * cd src
  * catkin_init_workspace
- * git clone https://github.com/OptoForce/etherdaq_ros.git
+ * git clone https://github.com/rushadantia/etherdaq_ros.git
  * cd ..
  * catkin_make
 
@@ -90,9 +90,6 @@ The node subscribes to /etdaq_zero where you can zero the force/torque readings 
 The node publishes to the following topics:
 *   /diagnostics where you can check the status of the EtherDAQ (speed, last F/T values, system status, address, etc)
 *   /etherdaq_data the topic where F/T values are published either in Wrench or in WrenchStamped format if the force and torque units are given 
-*   /etherdaq_data_raw topic where F/T values are published either in Wrench or in WrenchStamped format if the force and torque units are not given
-
-
 
 The list and short description of source files
 ----------------------------------------------
